@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bndk24m2ud4ik"]
+
+[node name="ButcherInterior" type="Node2D" unique_id=2143274760]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2068720508]
+
+[node name="BuyButton" type="Button" parent="CanvasLayer" unique_id=210901071]
+anchors_preset = -1
+anchor_right = 0.071
+offset_left = 33.0
+offset_top = 522.0
+offset_right = 252.0
+offset_bottom = 617.0
+theme_override_font_sizes/font_size = 63
+text = "Buy"
+
+[node name="SellButton" type="Button" parent="CanvasLayer" unique_id=820338926]
+anchors_preset = -1
+anchor_right = 0.09
+offset_left = 419.0
+offset_top = 522.0
+offset_right = 638.0
+offset_bottom = 617.0
+theme_override_font_sizes/font_size = 63
+text = "Sell"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1413970331]
+offset_left = 800.99994
+offset_top = 38.0
+offset_right = 840.99994
+offset_bottom = 78.0
+scale = Vector2(7.48, 14.44)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ColorRect" unique_id=2002255089]
+
+[node name="Rabbit" type="Button" parent="ColorRect/CanvasLayer" unique_id=500598818]
+anchors_preset = -1
+anchor_right = 0.071
+offset_left = 833.0
+offset_top = 60.0
+offset_right = 982.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 63
+text = "Rabbit"
+
+[node name="Deer" type="Button" parent="ColorRect/CanvasLayer" unique_id=1279984631]
+anchors_preset = -1
+anchor_right = 0.071
+offset_left = 833.0
+offset_top = 181.0
+offset_right = 982.0
+offset_bottom = 276.0
+theme_override_font_sizes/font_size = 63
+text = "Deer"

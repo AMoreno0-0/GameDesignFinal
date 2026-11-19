@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://sr0k0wc5c8na"]
+
+[ext_resource type="Script" uid="uid://dw7ep1jtbqxve" path="res://_Scripts/pause_menu.gd" id="1_6e5sq"]
+[ext_resource type="Texture2D" uid="uid://2c0xfxkxexj0" path="res://icon.svg" id="2_k2ulb"]
+[ext_resource type="Script" uid="uid://dmw1xnv3y8wpd" path="res://_Scripts/hunt_animals.gd" id="3_fyd6h"]
+[ext_resource type="Script" uid="uid://d2m8wbnle80we" path="res://_Scripts/change_location.gd" id="4_k2ulb"]
+
+[node name="MapOverview" type="Node2D" unique_id=1421246545]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1066288503]
+visible = false
+script = ExtResource("1_6e5sq")
+
+[node name="Title" type="RichTextLabel" parent="CanvasLayer" unique_id=1799435236]
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.2
+anchor_right = 0.8
+anchor_bottom = 0.8
+offset_left = 17.59999
+offset_top = -14.600006
+offset_right = 57.599915
+offset_bottom = 25.400024
+grow_horizontal = 0
+theme_override_font_sizes/normal_font_size = 62
+text = "Pause Menu"
+horizontal_alignment = 1
+
+[node name="Start Button" type="Button" parent="CanvasLayer" unique_id=2113276034]
+anchors_preset = -1
+offset_left = 344.0
+offset_top = 223.0
+offset_right = 912.0
+offset_bottom = 310.0
+theme_override_font_sizes/font_size = 58
+text = "Continue"
+
+[node name="Quit Button" type="Button" parent="CanvasLayer" unique_id=1220253172]
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.2
+anchor_right = 0.2
+anchor_bottom = 0.2
+offset_left = 115.59999
+offset_top = 221.4
+offset_right = 683.6
+offset_bottom = 308.4
+theme_override_font_sizes/font_size = 58
+text = "Quit"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1588541022]
+position = Vector2(266, 144)
+texture = ExtResource("2_k2ulb")
+script = ExtResource("3_fyd6h")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1858380489]
+script = ExtResource("4_k2ulb")
+
+[node name="Butcher" type="Button" parent="CanvasLayer2" unique_id=49109560]
+anchors_preset = -1
+offset_left = 353.0
+offset_top = 466.0
+offset_right = 747.0
+offset_bottom = 569.0
+theme_override_font_sizes/font_size = 69
+text = "Butcher"
+
+[connection signal="button_down" from="CanvasLayer/Start Button" to="CanvasLayer" method="_on_start_button_button_down"]
+[connection signal="button_down" from="CanvasLayer/Quit Button" to="CanvasLayer" method="_on_quit_button_button_down"]
+[connection signal="button_down" from="CanvasLayer2/Butcher" to="CanvasLayer2" method="_on_butcher_button_down"]
