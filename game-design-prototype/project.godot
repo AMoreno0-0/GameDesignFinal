@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 PauseHandler="*uid://b52becryf4npc"
 MoonPhaseHandler="*uid://0lsykm80xqbc"
+LocationHandler="*uid://cvgiwjijaffx"
+PlayerInventory="*uid://bahog3lb5vjb0"
 
 [display]
 

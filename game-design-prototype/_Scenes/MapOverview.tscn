@@ -58,13 +58,25 @@ script = ExtResource("4_k2ulb")
 
 [node name="Butcher" type="Button" parent="CanvasLayer2" unique_id=49109560]
 anchors_preset = -1
-offset_left = 353.0
-offset_top = 466.0
-offset_right = 747.0
-offset_bottom = 569.0
+offset_left = 75.0
+offset_top = 474.0
+offset_right = 469.0
+offset_bottom = 577.0
 theme_override_font_sizes/font_size = 69
 text = "Butcher"
+
+[node name="GeneralStore" type="Button" parent="CanvasLayer2" unique_id=348036454]
+anchors_preset = -1
+anchor_left = 0.005
+anchor_right = 0.06
+offset_left = 579.0
+offset_top = 474.0
+offset_right = 1044.0
+offset_bottom = 577.0
+theme_override_font_sizes/font_size = 69
+text = "General Store"
 
 [connection signal="button_down" from="CanvasLayer/Start Button" to="CanvasLayer" method="_on_start_button_button_down"]
 [connection signal="button_down" from="CanvasLayer/Quit Button" to="CanvasLayer" method="_on_quit_button_button_down"]
 [connection signal="button_down" from="CanvasLayer2/Butcher" to="CanvasLayer2" method="_on_butcher_button_down"]
+[connection signal="button_down" from="CanvasLayer2/GeneralStore" to="CanvasLayer2" method="_on_general_store_button_down"]

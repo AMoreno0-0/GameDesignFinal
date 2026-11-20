@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://bndk24m2ud4ik"]
 
+[ext_resource type="Script" uid="uid://craijbyetnk5y" path="res://_Scripts/shop.gd" id="1_ll8dd"]
+
 [node name="ButcherInterior" type="Node2D" unique_id=2143274760]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2068720508]
+[node name="BuySell" type="CanvasLayer" parent="." unique_id=2068720508]
+script = ExtResource("1_ll8dd")
 
-[node name="BuyButton" type="Button" parent="CanvasLayer" unique_id=210901071]
+[node name="BuyButton" type="Button" parent="BuySell" unique_id=210901071]
 anchors_preset = -1
 anchor_right = 0.071
 offset_left = 33.0
@@ -14,7 +17,7 @@ offset_bottom = 617.0
 theme_override_font_sizes/font_size = 63
 text = "Buy"
 
-[node name="SellButton" type="Button" parent="CanvasLayer" unique_id=820338926]
+[node name="SellButton" type="Button" parent="BuySell" unique_id=820338926]
 anchors_preset = -1
 anchor_right = 0.09
 offset_left = 419.0
@@ -31,9 +34,10 @@ offset_right = 840.99994
 offset_bottom = 78.0
 scale = Vector2(7.48, 14.44)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="ColorRect" unique_id=2002255089]
+[node name="Inventory" type="CanvasLayer" parent="ColorRect" unique_id=2002255089]
+script = ExtResource("1_ll8dd")
 
-[node name="Rabbit" type="Button" parent="ColorRect/CanvasLayer" unique_id=500598818]
+[node name="Slot1" type="Button" parent="ColorRect/Inventory" unique_id=500598818]
 anchors_preset = -1
 anchor_right = 0.071
 offset_left = 833.0
@@ -41,14 +45,34 @@ offset_top = 60.0
 offset_right = 982.0
 offset_bottom = 155.0
 theme_override_font_sizes/font_size = 63
-text = "Rabbit"
+text = "Slot1"
 
-[node name="Deer" type="Button" parent="ColorRect/CanvasLayer" unique_id=1279984631]
+[node name="Slot2" type="Button" parent="ColorRect/Inventory" unique_id=1279984631]
 anchors_preset = -1
 anchor_right = 0.071
 offset_left = 833.0
-offset_top = 181.0
+offset_top = 200.0
 offset_right = 982.0
-offset_bottom = 276.0
+offset_bottom = 295.0
 theme_override_font_sizes/font_size = 63
-text = "Deer"
+text = "Slot2"
+
+[node name="Slot3" type="Button" parent="ColorRect/Inventory" unique_id=944458002]
+anchors_preset = -1
+anchor_right = 0.071
+offset_left = 832.0
+offset_top = 344.0
+offset_right = 981.0
+offset_bottom = 439.0
+theme_override_font_sizes/font_size = 63
+text = "Slot3"
+
+[node name="Slot4" type="Button" parent="ColorRect/Inventory" unique_id=1415338739]
+anchors_preset = -1
+anchor_right = 0.071
+offset_left = 832.0
+offset_top = 487.0
+offset_right = 981.0
+offset_bottom = 582.0
+theme_override_font_sizes/font_size = 63
+text = "Slot4"
